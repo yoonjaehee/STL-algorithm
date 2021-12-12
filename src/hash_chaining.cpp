@@ -1,4 +1,6 @@
-// chaining 은 해시 테이블의 특정 위체엇 하나의 연결리스트를 저장한다. 충돌이 발생하면 리스트 맨 뒤에 새로운 키 집어넣음.
+// chaining 은 해시 테이블의 특정 위치에 하나의 연결리스트를 저장한다. 충돌이 발생하면 리스트 맨 뒤에 새로운 키 집어넣음.
+// 하지만 모든 키가 같은 해시 값을 가질 경우, 룩업 연산과 삭제는 엄청나게 느림.
+// 이거는 STL에서 std::unordered_set<Key>, std::unordered_map<key,value> 형태로 미리 구현해서 제공한다.
 #include <iostream>
 #include <vector>
 #include <list>
