@@ -12,7 +12,6 @@ void minheap(int x){
             print_heap.push_back(heap.front());
             heap.erase(heap.begin());
         }
-        
     }
     else{
         heap.push_back(x);
