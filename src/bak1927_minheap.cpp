@@ -11,7 +11,6 @@ void minheap(int x){
         else{
             print_heap.push_back(heap.front());
             heap.erase(heap.begin());
-            int count=heap.size();
         }
         
     }
