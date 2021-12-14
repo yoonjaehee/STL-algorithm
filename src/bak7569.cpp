@@ -26,6 +26,7 @@ int main(){
     int px[]={1,-1,0,0,0,0};
     int py[]={0,0,1,-1,(-1*h),h};
     int cols=m*h;
+    adj=vector<vector<int>>(n,vector<int>(cols,0));
     for(int p=0;p<h;p++){
         for(int i=0;i<n;i++){
             for(int t=0;t<m;t++){
@@ -34,7 +35,7 @@ int main(){
             }
         }
     }
-    visited= vector<vector<bool>>(n,vector<bool>(m*h,false));
+    visited=vector<vector<bool>>(n,vector<bool>(cols,false));
     for(int i=0;i<n;i++){
         for(int t=0;t<cols;t++){
             if(!visited[i][t] && adj[i][t]==1){
