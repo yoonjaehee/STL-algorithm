@@ -23,17 +23,18 @@ void del(){
         tem.pop_back();
     }
     else{
-        int real = tem_ans[tem[0].first];
+        int real = tem_ans[tem.front().second];
         int real2 = 1;
         for(int t=1;t<temp_count;t++){
-            if(tem_ans[tem[t-1].second] < tem_ans[tem[t].second]){
-                real=tem_ans[tem[t].first];
-                real2=t;
+            if(tem_ans[tem[t-1].second] >= tem_ans[tem[t].second]){
+                real=tem_ans[tem[t].second];
+                real2=t+1;
             }
         }
         tem.erase(tem.begin()+(real2-1));
         for(int t=0;t<temp_count-1;t++){
             pq.push({tem[t].first,tem[t].second});
+            printf("%d %d\n",tem[t].first,tem[t].second);
         }
         for(int t=0;t<temp_count-1;t++){
             tem.pop_back();
@@ -49,8 +50,10 @@ int main(){
         if(num==0){
             if(pq.empty()){
                 ans.push_back(0);
+                tem_ans.push_back(0);
             }
             else{
+                tem_ans.push_back(0);
                 del();
             }
         }
