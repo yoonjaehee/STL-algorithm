@@ -27,6 +27,6 @@ int main(){
         ans.push_back(count(cau));
     }
     for(int i=0;i<num;i++){
-        printf("%d",ans[i]);
+        printf("%d\n",ans[i]);
     }
 }
