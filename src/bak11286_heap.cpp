@@ -34,7 +34,6 @@ void del(){
         tem.erase(tem.begin()+(real2-1));
         for(int t=0;t<temp_count-1;t++){
             pq.push({tem[t].first,tem[t].second});
-            printf("%d %d\n",tem[t].first,tem[t].second);
         }
         for(int t=0;t<temp_count-1;t++){
             tem.pop_back();
@@ -63,7 +62,6 @@ int main(){
             pq.push({ab,i});
         }
     }
-    printf("\n");
     for(int i=0;i<ans.size();i++){
         printf("%d\n", ans[i]);
     }
