@@ -10,7 +10,7 @@ int main()
     string s;
     vector<string> v;
     for (int i = 0; i < n + m; i++) {
-        scanf("%s",s);
+        cin >> s;
         v.push_back(s);
     }
     sort(v.begin(), v.end());
