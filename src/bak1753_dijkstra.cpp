@@ -9,7 +9,9 @@ int dist[20001];
 void dijkstra(int st){
     dist[st]=0;
     pq.push({0,st});
-    while(!pq.empty()){
+    while(!pq.empty()){ // 내가 파악하기에 -를 붙이는 이유가 
+    //사실 다음까지의 거리만 두고 봤을때 계산하기 쉬우라고 한듯.
+    //cost + next_cost 해석 편하라고...
         int cost = -pq.top().first;
         int cur = pq.top().second;
         pq.pop();
