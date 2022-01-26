@@ -9,13 +9,14 @@ int py[4]={1,-1,0,0};
 char graph[1001][1001]={0,};
 queue<pair<pair<int,int>,int>> q;
 int visited[1001][1001][2]={0,};
+int cur_x,cur_y,block,nx,ny;
 int bfs(){
     q.push({{0,0},1});
     visited[0][0][1]=1;
     while(!q.empty()){
-        int cur_x = q.front().first.second;
-        int cur_y = q.front().first.first;
-        int block = q.front().second;
+        cur_x = q.front().first.second;
+        cur_y = q.front().first.first;
+        block = q.front().second;
         q.pop();
         if((cur_x == m) && (cur_y == n)){
             return visited[cur_y][cur_x][block];
