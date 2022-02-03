@@ -38,5 +38,5 @@ string comb(int a,int b){
 }
 int main(){
     scanf("%d %d",&n,&m);
-    printf("%s",comb(n,m));
+    cout<<comb(n,m);
 }
