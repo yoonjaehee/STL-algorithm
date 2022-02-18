@@ -15,6 +15,9 @@ void dijks(int st, int ed){
         int cost = -pq.top().first;
         int here = pq.top().second;
         pq.pop();
+        if(dist[here] < cost){
+            continue;
+        }
         for(int i=0;i<arr[here].size();i++){
             int next = arr[here][i].first;
             int next_cost = arr[here][i].second;
