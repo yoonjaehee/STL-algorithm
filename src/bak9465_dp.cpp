@@ -26,6 +26,6 @@ int main(){
             dp[1][y] = max((dp[0][y-2] + vec[1][y]),(dp[0][y-1] + vec[1][y]));
         }
         sum = max(dp[0][t],dp[1][t]);
-        printf("%d",sum);
+        printf("%d\n",sum);
     }
 }
