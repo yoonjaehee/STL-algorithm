@@ -5,7 +5,6 @@
 using namespace std;
 vector<string> vec;
 string counting(string str){
-    printf("%s",str);
     stack<char> st;
     int len = str.length();
     for(int i=0;i<len;i++){
@@ -17,8 +16,8 @@ string counting(string str){
                 if(st.top() == '('){
                     st.pop();
                 }
-                else if(st.top() == '['){
-                    return "NO";
+                else{
+                    return "no";
                 }
             }
             else{
@@ -26,30 +25,31 @@ string counting(string str){
                     if(st.top() == '['){
                         st.pop();
                     }
-                    else if(st.top() == '('){
-                        return "NO";
+                    else{
+                        return "no";
                     }
                 }
             }
         }
     }
     if(st.empty()){
-        return "YES";
+        return "yes";
     }
     else{
-        return "NO";
+        return "no";
     }
 }
 int main(){
     int count = 0; 
     while(1){
-        string temp;
-        char arr[101];
-        scanf("%s",arr);
-        if(arr == "."){
+        string s,temp;
+        cin.ignore();
+        getline(cin,s);
+        if(s == "."){
             break;
         }
-        temp=counting(arr);
+        temp=counting(s);
+        cout<<temp;
         vec.push_back(temp);
         count++;
     }
