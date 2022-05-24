@@ -31,7 +31,7 @@ int main(){
     for(int i=m;i>=0;i--){
         if(DP[n][i] == true){
             printf("%d",i);
-            return;
+            return 0;
         }
     }
     printf("-1");
