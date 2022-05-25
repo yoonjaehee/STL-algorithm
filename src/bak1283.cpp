@@ -19,7 +19,7 @@ int main(){
             }
         }
         // 1. s[0] 없으면 넣기. 2. 단어 처음 문자 없으면 넣기 3. 순서대로 넣기.
-        for(int t=0;t<res.size();t++){
+        /*for(int t=0;t<res.size();t++){
             if(res[t] == s[0]){
                 temp=1;
                 break;
@@ -28,6 +28,7 @@ int main(){
             s.insert(0,1,'[');
             s.insert(2,1,']');
         } // s[0] res에 없으면 넣음
+        */
         if(temp == 1){
             char count=0;
             for(int t=0;t<bl[i].size();t++){
@@ -50,7 +51,7 @@ int main(){
                 auto it = find(res.begin(),res.end(),s[t]);
                 if(it != res.end()){
                     s.insert(*it,1,'[');
-                    s.insert(*it+2,1,'[');
+                    s.insert(*it+2,1,']');
                 }
             }
         } // 순서대로 없으면 넣음.
