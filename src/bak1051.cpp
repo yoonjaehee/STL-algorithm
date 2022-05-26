@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <vector>
 using namespace std;
 int main(){
     int n,m,temp,max,res;
@@ -21,7 +20,7 @@ int main(){
         for(int t=0;t<m;t++){
             for(int p=1;p<max;p++){
                 if((t+p > m) || (i+p > n)){
-                    break;;
+                    break;
                 }
                 lu = arr[i][t];
                 ld = arr[i+p][t];
