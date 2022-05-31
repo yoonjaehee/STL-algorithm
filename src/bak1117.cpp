@@ -25,12 +25,6 @@ int main(){
         }
     }
     for(int i=0;i<h;i++){
-        for(int t=0;t<w;t++){
-            printf("%d ",arr[i][t]);
-        }
-        printf("\n");
-    }
-    for(int i=0;i<h;i++){
         for(int t=0;t<f;t++){
             if(f+t>=w){
                 continue;
