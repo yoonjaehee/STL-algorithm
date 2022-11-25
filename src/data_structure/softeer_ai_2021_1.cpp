@@ -24,14 +24,13 @@ int main(){
     int tm = 0;
     vec.erase(unique(vec.begin(),vec.end()),vec.end());
     sort(vec.begin(),vec.end());
-    for(int i=0;i<vec.size();i++){
-        temp = vec[i+1]-vec[i];
-        total+=temp*temp*arr[vec[i]];
-        if(total > bg){
-            int answer = sqrt(bg/arr[vec[i]]);
-            printf("%d",answer+vec[i]);
-            return 0;
+    if(((max-vec[0]) * (max-vec[0]))<=sqrt(bg/cm)){
+        for(int i=0;i<cm;i++){
+            //하나하나 늘려가면서 
         }
-        arr[vec[i]+1] += arr[vec[i]];
+    }
+    else{
+        //애초에 초과...
+        
     }
 }
