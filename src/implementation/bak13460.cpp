@@ -86,7 +86,7 @@ void dfs(int count,vector<vector<char>> ch,int rsy,int rsx,int bsy,int bsx){
             }
         }
     }
-    for(int i=rsy+1;i<m;i++){ // 위쪽으로 몰기
+    for(int i=rsy+1;i<m;i++){ // 아래쪽으로 몰기
         if(tem[i][rsx] == '#'){
             if(bsx == rsx){
                 tem[rsy][rsx]='.';
