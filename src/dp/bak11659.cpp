@@ -23,6 +23,6 @@ int main(){
         DP[i] = DP[i-1]+vec[i-1];
     }
     for(int i=0;i<m;i++){
-        printf("%d",DP[res[i].second] - DP[res[i].first -1]);
+        printf("%d\n",DP[res[i].second] - DP[res[i].first -1]);
     }
 }
