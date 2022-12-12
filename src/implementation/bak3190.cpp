@@ -8,8 +8,8 @@ queue<pair<int,char>> q; // 방향 전환
 queue<pair<int,char>> tail; // 꼬리 현황
 void dfs(int cnt,char dir,int starty,int startx){
     int tmx,tmy;
-    if(starty == n || startx == n || ((starty != 0) &&(startx != 0) && (arr[starty][startx] == 2)) || startx <0 || starty <0){
-        printf("\n%d",cnt);
+    if(starty == n || startx == n || ((starty != 0) && (startx != 0) && (arr[starty][startx] == 2)) || startx < 0 || starty < 0){
+        printf("%d",cnt);
         return;
     }
     if(dir == 'R'){
@@ -30,7 +30,6 @@ void dfs(int cnt,char dir,int starty,int startx){
             if(q.front().second == 'R'){
                 q.pop();
                 dfs(cnt+1,'D',starty,startx+1);
-                printf("turn!");
             }
             else if(q.front().second == 'L'){
                 q.pop();
