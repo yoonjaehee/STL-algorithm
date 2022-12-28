@@ -23,7 +23,5 @@ int main(){
             dp[p+vec[i]]+=dp[p];
         }
     }
-    for(int i=0;i<=k;i++){
-        printf("%d:%d ",i,dp[i]);
-    }
+    printf("%d",dp[k]);
 }
