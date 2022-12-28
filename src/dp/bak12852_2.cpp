@@ -18,17 +18,16 @@ int main(){
             dp[i] = dp[i/2] + 1;
             before[i] = i/2;
         }
-        if((i%3 == 0) && dp[i] > dp[i/3] + 1){
+        if((i%3 == 0) && (dp[i] > dp[i/3] + 1)){
             dp[i] = dp[i/3] + 1;
             before[i] = i/3;
         }
     }
     printf("%d\n",dp[x]);
     int temp = x;
-    while(temp != 1){
+    while(temp != -1){
         printf("%d ",temp);
         temp = before[temp];
     }
-    printf("1");
-
+    return 0;
 }
