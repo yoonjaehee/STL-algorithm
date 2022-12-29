@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-int dp[101]={0,};
+long long dp[101]={0,};
 vector<int> vec;
 int main(){
     int t,temp;
@@ -19,10 +19,15 @@ int main(){
     dp[2] = 1;
     dp[3] = 2;
     dp[4] = 2;
-    for(int i=5;i<=max;i++){
-        dp[i] = dp[i-1] + dp[i-5];
+    dp[5] = 3;
+    dp[6] = 4;
+    dp[7] = 5;
+    dp[8] = 7;
+    dp[9] = 9;
+    for(int i=10;i<=max;i++){
+        dp[i] = dp[i-2] + dp[i-3];
     }
     for(int i=0;i<vec.size();i++){
-        printf("%d\n",dp[vec[i]-1]);
+        printf("%lld\n",dp[vec[i]-1]);
     }
 }
