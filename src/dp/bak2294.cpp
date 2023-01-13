@@ -20,8 +20,8 @@ int main(){
     for(int i=0;i<si;i++){ // 큰수마다 돌림
         dp[vec[i]] = 1;
         for(int t=0;t<=k;t++){ // 이미 있는 수들 갯수 더하기
-            if(dp[t] != 0){ //  
-                if((dp[t+vec[i]] != 0) && (dp[t+vec[i]] > dp[t]+1)){
+            if(dp[t] != 0){ // 
+                if((dp[t+vec[i]] != 0) && (dp[t+vec[i]] < dp[t]+1)){ //
                     continue;
                 }
                 else{
