@@ -12,9 +12,9 @@ int main(){
         vec.push_back(temp);
     }
     int len=vec.size();
-    for(int k=0;k<len;k++){
+    for(int k=0;k<len;k++){ // len 만큼 반복
         dp[k] = 1;
-        for(int i=0;i<k;i++){
+        for(int i=0;i<k;i++){ // 새로운 숫자랑 비교해서 긴 길이 
             if(vec[i]<vec[k]){
                 dp[k] = max(dp[k],dp[i]+1);
             }
