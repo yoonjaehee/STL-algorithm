@@ -15,9 +15,6 @@ int main(){
         getline(cin,s);
         vec.push_back(s);
     }
-    for(int i=0;i<vec.size();i++){
-        cout<<vec[i]<<" ";
-    }
     for(int i=0;i<m;i++){
         getline(cin,s);
         for(int t=0;t<s.size();t++){
