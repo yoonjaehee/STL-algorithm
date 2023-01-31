@@ -26,6 +26,6 @@ int main(){
                 minHeap.push(ch1);
             }
         }
-        printf("%d\n",maxHeap.top());
     }
+    printf("%d\n",maxHeap.top());
 }
