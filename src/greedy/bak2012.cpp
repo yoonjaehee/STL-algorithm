@@ -5,7 +5,7 @@ using namespace std;
 vector<int> vec;
 int main(){
     int n,temp;
-    int total = 0;
+    long long total = 0;
     scanf("%d",&n);
     for(int i=0;i<n;i++){
         scanf("%d",&temp);
@@ -20,5 +20,5 @@ int main(){
             total+=(vec[i-1]-i);
         }
     }
-    printf("%d",total);
+    cout<<total;
 }
