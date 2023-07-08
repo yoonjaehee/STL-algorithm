@@ -20,8 +20,16 @@ int main(){
         while(sidx < eidx){
             sum=vec[sidx] + vec[eidx];
             if(sum == find){
-                count++;
-                break;
+                if(sidx != i && eidx != i){
+                    count++;
+                    break;
+                }
+                else if(sidx == i){
+                    sidx++;
+                }
+                else if(eidx == i){
+                    eidx--;
+                }
             }
             else if(sum < find){
                 sidx++;
