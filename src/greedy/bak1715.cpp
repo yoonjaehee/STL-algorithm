@@ -3,13 +3,14 @@
 #include <queue>
 using namespace std;
 int main(){
-    int n,temp,data,data2,sum;
+    int n,temp,data,data2;
     scanf("%d",&n);
     priority_queue<int,vector<int>,greater<int>> pq;
     for(int i=0;i<n;i++){
         scanf("%d",&temp);
         pq.push(temp);
     }
+    int sum = 0;
     while(pq.size() != 1){
         data = pq.top();
         pq.pop();
