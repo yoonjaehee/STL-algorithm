@@ -21,7 +21,6 @@ int main(){
             sum+=(stoi(word));
         }
         vec2.push_back(sum);
-        printf("%d ",vec2[i]);
     }
     int res = vec2[0];
     for(int i=1;i<vec2.size();i++){
