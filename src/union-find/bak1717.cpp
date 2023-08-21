@@ -8,7 +8,7 @@ int find(int tem){
         return tem;
     }
     else{
-        return find(vec[tem]);
+        return vec[tem] = find(vec[tem]); // find 시간 복잡도 최대한 줄이기. 연산을 할때 거치는 노드들이 대표 노드와 바로 연결되는 형태로 변경...
     }
 }
 bool conf(int p,int q){
