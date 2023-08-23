@@ -13,7 +13,7 @@ int find(int a){
         return vec[a] = find(vec[a]);
     }
 }
-int unio(int a,int b){
+void unio(int a,int b){
     a = find(a);
     b = find(b);
     if(a!=b){
@@ -23,11 +23,8 @@ int unio(int a,int b){
 int main(){
     scanf("%d",&n);
     scanf("%d",&m);
-    vec.resize(m+1);
-    for(int i=0;i<n+1;i++){
-        memset(arr[i],0,sizeof(int)*(n+1));
-    }
-    for(int i=0;i<=m;i++){
+    vec.resize(n+1);
+    for(int i=1;i<=n;i++){
         vec[i] = i;
     }
     for(int i=1;i<=n;i++){
@@ -58,4 +55,5 @@ int main(){
     if(connect){
         printf("YES");
     }
+    return 0;
 }
