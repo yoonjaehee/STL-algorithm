@@ -14,7 +14,7 @@ int main(){
         scanf("%d %d",&we,&val);
         pq.push({val,we});
     }
-    int sum = 0;
+    long long sum = 0;
     for(int i=0;i<bag;i++){
         int temp;
         scanf("%d",&temp);
