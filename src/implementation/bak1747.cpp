@@ -27,6 +27,9 @@ bool conf(int start){
 int main(){
     scanf("%d",&num);
     while(1){
+        if(num == 1){
+            continue;
+        }
         if(ispelin(num) && conf(num)){
             printf("%d",num);
             return 0;
