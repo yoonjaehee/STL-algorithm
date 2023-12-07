@@ -40,7 +40,6 @@ void dfs(int cnt){
     for(int i=0;i<vec4.size();i++){
         vec.push_back(vec4[i]);
     }
-    printf("%d",vec.size());
     for(int i=0;i<vec.size();i++){ // 번식
         if(vec[i].second % 5 == 0 && vec[i].second > 0){
             for(int t=0;t<8;t++){
