@@ -16,7 +16,7 @@ void mov(int sty,int stx,int direc){
     while(1){
         visited[sty][stx] = true;
         ny = sty + py[direc];
-        nx = stx + px[direc];
+        nx = stx + px[direc];g
         if(arr[ny][nx] != 6 && ny >= 0 && nx < 8 && nx >=0 && ny < 8){
             stx = nx;
             sty = ny;
