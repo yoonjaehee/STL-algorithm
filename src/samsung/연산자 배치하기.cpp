@@ -1,14 +1,14 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <limits.h>
+#include <queue>
 using namespace std;
 int n,temp,pl,mi,mul,sum;
 vector<int> vec;
 vector<char> choose;
 char arr[12];
-int mx = 0;
-int mn = INT_MAX;
+priority_queue<int> pq;
+priority_queue<int,vector<int>,greater<int>> pq2;
 bool visited[12];
 void dfs(int len){
     if(len == n-1){
@@ -24,12 +24,8 @@ void dfs(int len){
                 sum *= vec[i+1];
             }
         }
-        if(sum > mx){
-            mx = sum;
-        }
-        if(sum < mn){
-            mn = sum;
-        }
+        pq.push(sum);
+        pq2.push(sum);
         return;
     }
     for(int i=0;i<choose.size();i++){
@@ -59,5 +55,5 @@ int main(){
         choose.push_back('*');
     }
     dfs(0);
-    printf("%d %d",mn,mx);
+    printf("%d %d",pq2.top(),pq.top());
 }
