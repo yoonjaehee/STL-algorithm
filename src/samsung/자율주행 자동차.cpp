@@ -100,11 +100,5 @@ int main(){
         }
     }
     dfs(sty,stx,tem,1);
-    for(int i=0;i<n;i++){
-        for(int t=0;t<m;t++){
-            printf("%d",visited[i][t]);
-        }
-        printf("\n");
-    }
     printf("%d",mx);
 }
