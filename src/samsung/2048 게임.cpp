@@ -42,7 +42,7 @@ void mov(vector<vector<int>> tmp,int start,int dir){
                 if(a != i || b != t){
                     tmp[i][t] = 0;
                 }
-                if(a >= 1){
+                if(a >= 1){ // 변화되는 부분이 맞는지 확인 절차 !!! 이것때매 30분날림.. 
                     if(tmp[a-1][b] == tmp[a][b] && !visited[a-1][b]){
                         tmp[a-1][b]*=2;
                         if(tmp[a-1][b] > mx){
