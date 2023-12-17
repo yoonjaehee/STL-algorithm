@@ -101,13 +101,6 @@ void dfs(int start){
     for(int i=0;i<n;i++){
         memset(visited[i],0,sizeof(bool)*m);
     }
-    for(int i=0;i<n;i++){
-        for(int t=0;t<m;t++){
-            printf("%d ",arr[i][t]);
-        }
-        printf("\n");
-    }
-    printf("\n");
     bool can = true;
     for(int i=0;i<n;i++){ // 제거 후 비활성화
         if(arr[i][start] != 0){
