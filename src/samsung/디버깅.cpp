@@ -91,7 +91,7 @@ int main(){
         scanf("%d %d",&y,&x);
         arr2[y-1][x-1] = true; 
     }
-    for(int i=0;i<=2;i++){
+    for(int i=0;i<=3;i++){
         can2 = false;
         dfs(0,i);
         if(can2){
