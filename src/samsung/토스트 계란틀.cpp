@@ -57,7 +57,7 @@ int main(){
                     sum = arr[i][t];
                     dfs(i,t);
                 }
-                for(int i=0;i<vec.size();i++){
+                for(int i=0;i<vec.size();i++){ // 중간에 다른방향 커브있는거때문에 나중에 다 한번에 초기화해야됨.
                     arr[vec[i].first][vec[i].second] = sum/cnt;
                 }
             }
