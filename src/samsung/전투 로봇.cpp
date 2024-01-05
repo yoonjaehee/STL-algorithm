@@ -70,7 +70,7 @@ void bfs(vector<int> &rt,int len){
                     if(rt[2] < arr[ny][nx]){
                         continue;
                     }
-                    arr2[ny][nx] = arr2[temy][temx] + 1;
+                    arr2[ny][nx] = arr2[temy][temx] + 1; // 이거 조심!
                     q.push({ny,nx});
                     visited[ny][nx] = true;
                     if(arr[ny][nx] != 0 && rt[2] > arr[ny][nx] ){
@@ -89,9 +89,7 @@ void bfs(vector<int> &rt,int len){
     else{
         temp = pq.top();
         arr[temp[0]][temp[1]] = 0;
-        printf("{%d %d}",temp[0],temp[1]);
         for(int i=0;i<pq.size();i++){
-            printf("%d %d %d\n",pq.top()[0],pq.top()[1],pq.top()[2]);
             pq.pop();
         }
         rt[0] = temp[0];
