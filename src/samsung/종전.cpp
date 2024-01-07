@@ -78,9 +78,6 @@ void dfs(int sty, int stx){
             int a=min(min(min(min(sum,sum1),sum2),sum3),sum4);
             int b=max(max(max(max(sum,sum1),sum2),sum3),sum4);
             pq.push(b-a);
-            if(mn > b-a){
-                printf("{%d %d}{%d %d}{%d %d}{%d %d} : %d {%d}{%d}{%d}{%d}{%d}\n",topy,topx,lefty,leftx,downy,downx,righty,rightx,b-a,sum,sum1,sum2,sum3,sum4);
-            }
         }
     }
 }
@@ -97,8 +94,5 @@ int main(){
             dfs(i,t); // 위 기준
         }
     }
-    for(int i=0;i<pq.size();i++){
-        printf("%d ",pq.top());
-        pq.pop();
-    }
+    printf("%d",pq.top());
 }
