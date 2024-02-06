@@ -79,7 +79,6 @@ void dfs(int starty,int startx,int bat){
         return;
     }
     bat -= min;
-    printf("cur bat : %d min : %d ||",bat,min);
     visited[minidx] = true;
     bfs(people[minidx][0],people[minidx][1],people[minidx][2],people[minidx][3],minidx); // 도착 하는 지점
     if(dis[minidx] == -1){
@@ -91,7 +90,6 @@ void dfs(int starty,int startx,int bat){
     else{
         bat+=dis[minidx];
     }
-    printf("%d %d -> %d %d bat : %d\n",people[minidx][0],people[minidx][1],people[minidx][2],people[minidx][3],bat);
     dfs(people[minidx][2],people[minidx][3],bat);
 }
 int main(){
