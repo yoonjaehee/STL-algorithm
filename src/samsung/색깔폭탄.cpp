@@ -140,14 +140,6 @@ bool simulate(){
     Gravity();
     Rotate();
     Gravity();
-    /*for(int i=0;i<n;i++){
-        for(int t=0;t<n;t++){
-            printf("%d ",arr[i][t]);
-        }
-        printf("\n");
-    }
-    printf("\n");
-    */
     res+=(mx * mx);
     return true;
 } 
