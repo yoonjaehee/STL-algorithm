@@ -4,6 +4,7 @@
 #include <queue>
 #include <string>
 #include <limits.h>
+#include <sstream>
 using namespace std;
 int n,m,k,temp;
 bool visited[11][11]; // 공격 무관
@@ -14,7 +15,7 @@ int dy[4] = {0,1,0,-1};
 int dx[4] = {1,0,-1,0};
 int dt[8] = {1,1,1,-1,-1,-1,0,0};
 int dp[8] = {1,-1,0,0,1,-1,1,-1};
-queue<pair<pair<int,int>,int>> q;
+queue<pair<pair<int,int>,string>> q;
 bool chan = false;
 void choatk(){
     int cand1 = INT_MAX;
@@ -102,34 +103,22 @@ void chotar(){
 }
 void attack(){
     bool exist = false;
-    q = queue<pair<pair<int,int>,int>>();
-    q.push({{aty,atx},0});
+    q = queue<pair<pair<int,int>,string>>();
+    q.push({{aty,atx},""});
     visited[aty][atx] = true;
-    string track = "";
+    string track;
     while(!q.empty()){
-        pair<pair<int,int>,int> tmp= q.front();
+        pair<pair<int,int>,string> tmp= q.front();
         q.pop();
         for(int i=0;i<4;i++){
-            int ny = (tmp.first.first + dy[i]);
-            int nx = (tmp.first.second + dx[i]);
-            if(ny >= n){
-                ny = 0;
-            }
-            if(ny < 0){
-                ny = n-1;
-            }
-            if(nx >= m){
-                nx = 0;
-            }
-            if(nx < 0){
-                nx = m-1;
-            }
-            if(!visited[ny][nx] && (arr[ny][nx].first > 0 )){
+            int ny = (tmp.first.first + dy[i] + n)%n;
+            int nx = (tmp.first.second + dx[i] + m)%m;
+            if((!visited[ny][nx]) && (arr[ny][nx].first > 0 )){
                 visited[ny][nx] = true;
-                q.push({{ny,nx},(tmp.second*10)+(i+1)});
+                q.push({{ny,nx},tmp.second + to_string(i+1)});
                 if((ny == tary) && (nx == tarx)){
                     exist = true;
-                    track = to_string(tmp.second);
+                    track = tmp.second;
                     break;
                 }
             }
@@ -225,13 +214,13 @@ void dfs(int start){
         }
     }
     /*printf("\n");
+    printf("{%d %d}",aty,atx);
     for(int i=0;i<n;i++){
         for(int t=0;t<m;t++){
             printf("%d ",arr[i][t].first);
         }
         printf("\n");
-    }
-    */
+    }*/
     dfs(start+1);
 }
 int main(){
