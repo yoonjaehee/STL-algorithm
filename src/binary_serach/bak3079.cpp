@@ -2,30 +2,30 @@
 #include <vector>
 #include <limits.h>
 using namespace std;
-long long n,m,temp;
-vector<int> vec;
+unsigned long long n,m,temp;
+vector<long long> vec;
 int main(){
-    long long mx = 0;
-    scanf("%d %d",&n,&m);
+    unsigned long long mx = 0;
+    cin >> n >> m;
     for(int i=0;i<n;i++){
-        scanf("%d",&temp);
+        cin>>temp;
         vec.push_back(temp);
         if(mx < temp){
             mx = temp;
         }
     }
-    long long start = 0;
-    long long end = mx * m;
-    long long answer = INT_MAX;
+    unsigned long long start = 1;
+    unsigned long long end = mx * m;
+    unsigned long long answer = 0;
     while(start <= end){
-        long long mid = (start + end)/2;
-        long long sum = 0;
+        unsigned long long mid = (start + end)/2;
+        unsigned long long sum = 0;
         for(int i=0;i<vec.size();i++){
             sum += (mid/vec[i]);
         }
         if(sum >= m){
-            if(sum >= m){
-                answer = min(answer,mid); 
+            if(answer > mid || answer == 0){
+                answer = mid;
             }
             end = mid-1;
         }
