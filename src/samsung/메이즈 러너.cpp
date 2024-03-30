@@ -1,3 +1,4 @@
+// 회전할때 이미 회전한거 확인해야한다. 그래서 flag를 설치해서 이미 회전한것들은 회전안시키게 했다!
 #include <iostream>
 #include <vector>
 #include <queue>
