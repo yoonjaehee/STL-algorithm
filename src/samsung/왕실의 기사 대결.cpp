@@ -1,3 +1,4 @@
+// 
 #include <iostream>
 #include <vector>
 #include <string.h>
@@ -94,13 +95,14 @@ void dfs(int start){
             damage(tmp[i],order[start][1],i);
         }
     }
-    for(int i=0;i<n;i++){
+    /*for(int i=0;i<n;i++){
         for(int t=0;t<n;t++){
             printf("%d ",arr2[i][t]);
         }
         printf("\n");
     }
     printf("\n");
+    */
     dfs(start+1);
 }
 int main(){
