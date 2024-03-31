@@ -1,4 +1,5 @@
-// 
+// index는 0부터인데 그래프에 자꾸 0을 넣어버리네...
+// 1. move 가능한지 확인 2. move확인하면서 tmp에 순서대로 넣기 3. damage줌. 근데 첫번째건 skip
 #include <iostream>
 #include <vector>
 #include <string.h>
